@@ -8,16 +8,19 @@ import com.jfinal.plugin.activerecord.ActiveRecordPlugin;
 import com.jfinal.plugin.activerecord.cache.EhCache;
 import com.jfinal.plugin.activerecord.dialect.AnsiSqlDialect;
 import com.jfinal.plugin.c3p0.C3p0Plugin;
-import com.jfinal.plugin.ehcache.EhCachePlugin;
-import com.jfinal.plugin.redis.RedisPlugin;
+import com.jfinal.plugin.cron4j.Cron4jPlugin;
 import com.jfinal.template.Engine;
 import controller.HelloController;
 import kit.codeAuto.ConfigFile;
 import model._MappingKit;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import task.MyTask;
+import task.PortTask;
 
 import java.sql.DriverManager;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 import java.util.Properties;
 
 /**
@@ -89,6 +92,14 @@ public class AppConfig extends JFinalConfig{
         arp.setCache(new EhCache());
         arp.setDialect(new AnsiSqlDialect());// 关键：使用AnsiSqlDialect
 //        arp.setShowSql(true);// 是/否显示sql语句
+
+
+        System.out.println("run cron4jPlugin");
+
+        Cron4jPlugin cpTask = new Cron4jPlugin();
+//        cpTask.addTask("0-59/1 * * * *", new MyTask());
+        cpTask.addTask("08 * * * *", new PortTask());
+        me.add(cpTask);
     }
 
     @Override

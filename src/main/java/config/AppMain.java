@@ -40,9 +40,9 @@ public class AppMain {
             PathKit.setWebRootPath(webRootPath);
             PathKit.setRootClassPath(classPath);
             // eclipse 启动是4个参数
-            JFinal.start(webRootPath, 1996, "/");
+            JFinal.start(webRootPath, 1995, "/");
         } else {
-            throw new RuntimeException("你丫的路径不对!");
+            throw new RuntimeException("路径不对");
         }
     }
 }

@@ -32,6 +32,7 @@
     <slf4j.log4j12.version>1.7.24</slf4j.log4j12.version>
     <mysqlJdbc.version>5.1.38</mysqlJdbc.version>
     <c3p0.version>0.9.1.2</c3p0.version>
+    <cron4j.version>2.2.5</cron4j.version>
     <!-- 以上已检查 -->
 
     <jfinal.cos.version>2017.5</jfinal.cos.version>
@@ -103,12 +104,35 @@
       <version>${mysqlJdbc.version}</version>
     </dependency>
 
-    <!-- https://mvnrepository.com/artifact/c3p0/c3p0 -->
-    <dependency>
-      <groupId>c3p0</groupId>
-      <artifactId>c3p0</artifactId>
-      <version>${c3p0.version}</version>
-    </dependency>
+      <!-- https://mvnrepository.com/artifact/c3p0/c3p0 -->
+      <dependency>
+          <groupId>c3p0</groupId>
+          <artifactId>c3p0</artifactId>
+          <version>${c3p0.version}</version>
+      </dependency>
+
+      <!-- 作业调度器 -->
+      <!-- https://mvnrepository.com/artifact/it.sauronsoftware.cron4j/cron4j -->
+      <dependency>
+          <groupId>it.sauronsoftware.cron4j</groupId>
+          <artifactId>cron4j</artifactId>
+          <version>${cron4j.version}</version>
+      </dependency>
+
+      <!-- https://mvnrepository.com/artifact/org.apache.httpcomponents/httpclient -->
+      <dependency>
+          <groupId>org.apache.httpcomponents</groupId>
+          <artifactId>httpclient</artifactId>
+          <version>4.5.2</version>
+      </dependency>
+
+      <!-- https://mvnrepository.com/artifact/org.json/json -->
+      <dependency>
+          <groupId>org.json</groupId>
+          <artifactId>json</artifactId>
+          <version>20160810</version>
+      </dependency>
+
 
 
   </dependencies>

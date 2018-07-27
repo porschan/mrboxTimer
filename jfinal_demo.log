@@ -430,3 +430,401 @@ java.lang.IllegalAccessError: class sun.reflect.GeneratedConstructorAccessor5 ca
 	at com.jfinal.server.JettyServer.start(JettyServer.java:70)
 	at com.jfinal.core.JFinal.start(JFinal.java:162)
 	at config.AppConfig.main(AppConfig.java:37)
+
+2018-07-27 11:58:36
+[ERROR]-[Thread: main]-[com.jfinal.core.Config.startPlugins()]: Plugin start error: com.jfinal.plugin.cron4j.Cron4jPlugin. 
+invalid pattern "0-59/* * * * *". Error parsing minutes field: invalid field "0-59/*", invalid element "0-59/*", invalid divisor "*".
+it.sauronsoftware.cron4j.InvalidPatternException: invalid pattern "0-59/* * * * *". Error parsing minutes field: invalid field "0-59/*", invalid element "0-59/*", invalid divisor "*".
+	at it.sauronsoftware.cron4j.SchedulingPattern.<init>(Unknown Source)
+	at it.sauronsoftware.cron4j.Scheduler.schedule(Unknown Source)
+	at it.sauronsoftware.cron4j.Scheduler.schedule(Unknown Source)
+	at com.jfinal.plugin.cron4j.Cron4jPlugin$TaskInfo.schedule(Cron4jPlugin.java:257)
+	at com.jfinal.plugin.cron4j.Cron4jPlugin.start(Cron4jPlugin.java:216)
+	at com.jfinal.core.Config.startPlugins(Config.java:128)
+	at com.jfinal.core.Config.configPluginWithOrder(Config.java:71)
+	at com.jfinal.core.Config.configJFinal(Config.java:56)
+	at com.jfinal.core.JFinal.init(JFinal.java:63)
+	at com.jfinal.core.JFinalFilter.init(JFinalFilter.java:49)
+	at org.eclipse.jetty.servlet.FilterHolder.doStart(FilterHolder.java:119)
+	at org.eclipse.jetty.util.component.AbstractLifeCycle.start(AbstractLifeCycle.java:64)
+	at org.eclipse.jetty.servlet.ServletHandler.initialize(ServletHandler.java:724)
+	at org.eclipse.jetty.servlet.ServletContextHandler.startContext(ServletContextHandler.java:265)
+	at org.eclipse.jetty.webapp.WebAppContext.startContext(WebAppContext.java:1250)
+	at org.eclipse.jetty.server.handler.ContextHandler.doStart(ContextHandler.java:706)
+	at org.eclipse.jetty.webapp.WebAppContext.doStart(WebAppContext.java:492)
+	at org.eclipse.jetty.util.component.AbstractLifeCycle.start(AbstractLifeCycle.java:64)
+	at org.eclipse.jetty.server.handler.HandlerWrapper.doStart(HandlerWrapper.java:95)
+	at org.eclipse.jetty.server.Server.doStart(Server.java:277)
+	at org.eclipse.jetty.util.component.AbstractLifeCycle.start(AbstractLifeCycle.java:64)
+	at com.jfinal.server.JettyServerForIDEA.doStart(JettyServerForIDEA.java:133)
+	at com.jfinal.server.JettyServerForIDEA.start(JettyServerForIDEA.java:72)
+	at com.jfinal.core.JFinal.start(JFinal.java:174)
+	at config.AppConfig.main(AppConfig.java:38)
+
+2018-07-27 11:58:36
+[WARN]-[Thread: main]-[org.eclipse.jetty.util.component.AbstractLifeCycle.setFailed()]: FAILED jfinal: java.lang.RuntimeException: Plugin start error: com.jfinal.plugin.cron4j.Cron4jPlugin. 
+invalid pattern "0-59/* * * * *". Error parsing minutes field: invalid field "0-59/*", invalid element "0-59/*", invalid divisor "*".
+java.lang.RuntimeException: Plugin start error: com.jfinal.plugin.cron4j.Cron4jPlugin. 
+invalid pattern "0-59/* * * * *". Error parsing minutes field: invalid field "0-59/*", invalid element "0-59/*", invalid divisor "*".
+	at com.jfinal.core.Config.startPlugins(Config.java:137)
+	at com.jfinal.core.Config.configPluginWithOrder(Config.java:71)
+	at com.jfinal.core.Config.configJFinal(Config.java:56)
+	at com.jfinal.core.JFinal.init(JFinal.java:63)
+	at com.jfinal.core.JFinalFilter.init(JFinalFilter.java:49)
+	at org.eclipse.jetty.servlet.FilterHolder.doStart(FilterHolder.java:119)
+	at org.eclipse.jetty.util.component.AbstractLifeCycle.start(AbstractLifeCycle.java:64)
+	at org.eclipse.jetty.servlet.ServletHandler.initialize(ServletHandler.java:724)
+	at org.eclipse.jetty.servlet.ServletContextHandler.startContext(ServletContextHandler.java:265)
+	at org.eclipse.jetty.webapp.WebAppContext.startContext(WebAppContext.java:1250)
+	at org.eclipse.jetty.server.handler.ContextHandler.doStart(ContextHandler.java:706)
+	at org.eclipse.jetty.webapp.WebAppContext.doStart(WebAppContext.java:492)
+	at org.eclipse.jetty.util.component.AbstractLifeCycle.start(AbstractLifeCycle.java:64)
+	at org.eclipse.jetty.server.handler.HandlerWrapper.doStart(HandlerWrapper.java:95)
+	at org.eclipse.jetty.server.Server.doStart(Server.java:277)
+	at org.eclipse.jetty.util.component.AbstractLifeCycle.start(AbstractLifeCycle.java:64)
+	at com.jfinal.server.JettyServerForIDEA.doStart(JettyServerForIDEA.java:133)
+	at com.jfinal.server.JettyServerForIDEA.start(JettyServerForIDEA.java:72)
+	at com.jfinal.core.JFinal.start(JFinal.java:174)
+	at config.AppConfig.main(AppConfig.java:38)
+Caused by: it.sauronsoftware.cron4j.InvalidPatternException: invalid pattern "0-59/* * * * *". Error parsing minutes field: invalid field "0-59/*", invalid element "0-59/*", invalid divisor "*".
+	at it.sauronsoftware.cron4j.SchedulingPattern.<init>(Unknown Source)
+	at it.sauronsoftware.cron4j.Scheduler.schedule(Unknown Source)
+	at it.sauronsoftware.cron4j.Scheduler.schedule(Unknown Source)
+	at com.jfinal.plugin.cron4j.Cron4jPlugin$TaskInfo.schedule(Cron4jPlugin.java:257)
+	at com.jfinal.plugin.cron4j.Cron4jPlugin.start(Cron4jPlugin.java:216)
+	at com.jfinal.core.Config.startPlugins(Config.java:128)
+	... 19 more
+
+2018-07-27 11:58:36
+[WARN]-[Thread: main]-[org.eclipse.jetty.webapp.WebAppContext.doStart()]: Failed startup of context o.e.j.w.WebAppContext{/,file:/D:/Codeware/profile/mrboxTimer/src/main/webapp/}
+java.lang.RuntimeException: Plugin start error: com.jfinal.plugin.cron4j.Cron4jPlugin. 
+invalid pattern "0-59/* * * * *". Error parsing minutes field: invalid field "0-59/*", invalid element "0-59/*", invalid divisor "*".
+	at com.jfinal.core.Config.startPlugins(Config.java:137)
+	at com.jfinal.core.Config.configPluginWithOrder(Config.java:71)
+	at com.jfinal.core.Config.configJFinal(Config.java:56)
+	at com.jfinal.core.JFinal.init(JFinal.java:63)
+	at com.jfinal.core.JFinalFilter.init(JFinalFilter.java:49)
+	at org.eclipse.jetty.servlet.FilterHolder.doStart(FilterHolder.java:119)
+	at org.eclipse.jetty.util.component.AbstractLifeCycle.start(AbstractLifeCycle.java:64)
+	at org.eclipse.jetty.servlet.ServletHandler.initialize(ServletHandler.java:724)
+	at org.eclipse.jetty.servlet.ServletContextHandler.startContext(ServletContextHandler.java:265)
+	at org.eclipse.jetty.webapp.WebAppContext.startContext(WebAppContext.java:1250)
+	at org.eclipse.jetty.server.handler.ContextHandler.doStart(ContextHandler.java:706)
+	at org.eclipse.jetty.webapp.WebAppContext.doStart(WebAppContext.java:492)
+	at org.eclipse.jetty.util.component.AbstractLifeCycle.start(AbstractLifeCycle.java:64)
+	at org.eclipse.jetty.server.handler.HandlerWrapper.doStart(HandlerWrapper.java:95)
+	at org.eclipse.jetty.server.Server.doStart(Server.java:277)
+	at org.eclipse.jetty.util.component.AbstractLifeCycle.start(AbstractLifeCycle.java:64)
+	at com.jfinal.server.JettyServerForIDEA.doStart(JettyServerForIDEA.java:133)
+	at com.jfinal.server.JettyServerForIDEA.start(JettyServerForIDEA.java:72)
+	at com.jfinal.core.JFinal.start(JFinal.java:174)
+	at config.AppConfig.main(AppConfig.java:38)
+Caused by: it.sauronsoftware.cron4j.InvalidPatternException: invalid pattern "0-59/* * * * *". Error parsing minutes field: invalid field "0-59/*", invalid element "0-59/*", invalid divisor "*".
+	at it.sauronsoftware.cron4j.SchedulingPattern.<init>(Unknown Source)
+	at it.sauronsoftware.cron4j.Scheduler.schedule(Unknown Source)
+	at it.sauronsoftware.cron4j.Scheduler.schedule(Unknown Source)
+	at com.jfinal.plugin.cron4j.Cron4jPlugin$TaskInfo.schedule(Cron4jPlugin.java:257)
+	at com.jfinal.plugin.cron4j.Cron4jPlugin.start(Cron4jPlugin.java:216)
+	at com.jfinal.core.Config.startPlugins(Config.java:128)
+	... 19 more
+
+2018-07-27 11:58:36
+[WARN]-[Thread: main]-[org.eclipse.jetty.util.component.AbstractLifeCycle.setFailed()]: FAILED o.e.j.w.WebAppContext{/,file:/D:/Codeware/profile/mrboxTimer/src/main/webapp/}: java.lang.RuntimeException: Plugin start error: com.jfinal.plugin.cron4j.Cron4jPlugin. 
+invalid pattern "0-59/* * * * *". Error parsing minutes field: invalid field "0-59/*", invalid element "0-59/*", invalid divisor "*".
+java.lang.RuntimeException: Plugin start error: com.jfinal.plugin.cron4j.Cron4jPlugin. 
+invalid pattern "0-59/* * * * *". Error parsing minutes field: invalid field "0-59/*", invalid element "0-59/*", invalid divisor "*".
+	at com.jfinal.core.Config.startPlugins(Config.java:137)
+	at com.jfinal.core.Config.configPluginWithOrder(Config.java:71)
+	at com.jfinal.core.Config.configJFinal(Config.java:56)
+	at com.jfinal.core.JFinal.init(JFinal.java:63)
+	at com.jfinal.core.JFinalFilter.init(JFinalFilter.java:49)
+	at org.eclipse.jetty.servlet.FilterHolder.doStart(FilterHolder.java:119)
+	at org.eclipse.jetty.util.component.AbstractLifeCycle.start(AbstractLifeCycle.java:64)
+	at org.eclipse.jetty.servlet.ServletHandler.initialize(ServletHandler.java:724)
+	at org.eclipse.jetty.servlet.ServletContextHandler.startContext(ServletContextHandler.java:265)
+	at org.eclipse.jetty.webapp.WebAppContext.startContext(WebAppContext.java:1250)
+	at org.eclipse.jetty.server.handler.ContextHandler.doStart(ContextHandler.java:706)
+	at org.eclipse.jetty.webapp.WebAppContext.doStart(WebAppContext.java:492)
+	at org.eclipse.jetty.util.component.AbstractLifeCycle.start(AbstractLifeCycle.java:64)
+	at org.eclipse.jetty.server.handler.HandlerWrapper.doStart(HandlerWrapper.java:95)
+	at org.eclipse.jetty.server.Server.doStart(Server.java:277)
+	at org.eclipse.jetty.util.component.AbstractLifeCycle.start(AbstractLifeCycle.java:64)
+	at com.jfinal.server.JettyServerForIDEA.doStart(JettyServerForIDEA.java:133)
+	at com.jfinal.server.JettyServerForIDEA.start(JettyServerForIDEA.java:72)
+	at com.jfinal.core.JFinal.start(JFinal.java:174)
+	at config.AppConfig.main(AppConfig.java:38)
+Caused by: it.sauronsoftware.cron4j.InvalidPatternException: invalid pattern "0-59/* * * * *". Error parsing minutes field: invalid field "0-59/*", invalid element "0-59/*", invalid divisor "*".
+	at it.sauronsoftware.cron4j.SchedulingPattern.<init>(Unknown Source)
+	at it.sauronsoftware.cron4j.Scheduler.schedule(Unknown Source)
+	at it.sauronsoftware.cron4j.Scheduler.schedule(Unknown Source)
+	at com.jfinal.plugin.cron4j.Cron4jPlugin$TaskInfo.schedule(Cron4jPlugin.java:257)
+	at com.jfinal.plugin.cron4j.Cron4jPlugin.start(Cron4jPlugin.java:216)
+	at com.jfinal.core.Config.startPlugins(Config.java:128)
+	... 19 more
+
+2018-07-27 11:58:36
+[WARN]-[Thread: main]-[org.eclipse.jetty.util.component.AbstractLifeCycle.setFailed()]: FAILED org.eclipse.jetty.server.Server@5f058f00: java.lang.RuntimeException: Plugin start error: com.jfinal.plugin.cron4j.Cron4jPlugin. 
+invalid pattern "0-59/* * * * *". Error parsing minutes field: invalid field "0-59/*", invalid element "0-59/*", invalid divisor "*".
+java.lang.RuntimeException: Plugin start error: com.jfinal.plugin.cron4j.Cron4jPlugin. 
+invalid pattern "0-59/* * * * *". Error parsing minutes field: invalid field "0-59/*", invalid element "0-59/*", invalid divisor "*".
+	at com.jfinal.core.Config.startPlugins(Config.java:137)
+	at com.jfinal.core.Config.configPluginWithOrder(Config.java:71)
+	at com.jfinal.core.Config.configJFinal(Config.java:56)
+	at com.jfinal.core.JFinal.init(JFinal.java:63)
+	at com.jfinal.core.JFinalFilter.init(JFinalFilter.java:49)
+	at org.eclipse.jetty.servlet.FilterHolder.doStart(FilterHolder.java:119)
+	at org.eclipse.jetty.util.component.AbstractLifeCycle.start(AbstractLifeCycle.java:64)
+	at org.eclipse.jetty.servlet.ServletHandler.initialize(ServletHandler.java:724)
+	at org.eclipse.jetty.servlet.ServletContextHandler.startContext(ServletContextHandler.java:265)
+	at org.eclipse.jetty.webapp.WebAppContext.startContext(WebAppContext.java:1250)
+	at org.eclipse.jetty.server.handler.ContextHandler.doStart(ContextHandler.java:706)
+	at org.eclipse.jetty.webapp.WebAppContext.doStart(WebAppContext.java:492)
+	at org.eclipse.jetty.util.component.AbstractLifeCycle.start(AbstractLifeCycle.java:64)
+	at org.eclipse.jetty.server.handler.HandlerWrapper.doStart(HandlerWrapper.java:95)
+	at org.eclipse.jetty.server.Server.doStart(Server.java:277)
+	at org.eclipse.jetty.util.component.AbstractLifeCycle.start(AbstractLifeCycle.java:64)
+	at com.jfinal.server.JettyServerForIDEA.doStart(JettyServerForIDEA.java:133)
+	at com.jfinal.server.JettyServerForIDEA.start(JettyServerForIDEA.java:72)
+	at com.jfinal.core.JFinal.start(JFinal.java:174)
+	at config.AppConfig.main(AppConfig.java:38)
+Caused by: it.sauronsoftware.cron4j.InvalidPatternException: invalid pattern "0-59/* * * * *". Error parsing minutes field: invalid field "0-59/*", invalid element "0-59/*", invalid divisor "*".
+	at it.sauronsoftware.cron4j.SchedulingPattern.<init>(Unknown Source)
+	at it.sauronsoftware.cron4j.Scheduler.schedule(Unknown Source)
+	at it.sauronsoftware.cron4j.Scheduler.schedule(Unknown Source)
+	at com.jfinal.plugin.cron4j.Cron4jPlugin$TaskInfo.schedule(Cron4jPlugin.java:257)
+	at com.jfinal.plugin.cron4j.Cron4jPlugin.start(Cron4jPlugin.java:216)
+	at com.jfinal.core.Config.startPlugins(Config.java:128)
+	... 19 more
+
+2018-07-27 11:58:36
+[ERROR]-[Thread: main]-[com.jfinal.kit.LogKit.error()]: Plugin start error: com.jfinal.plugin.cron4j.Cron4jPlugin. 
+invalid pattern "0-59/* * * * *". Error parsing minutes field: invalid field "0-59/*", invalid element "0-59/*", invalid divisor "*".
+java.lang.RuntimeException: Plugin start error: com.jfinal.plugin.cron4j.Cron4jPlugin. 
+invalid pattern "0-59/* * * * *". Error parsing minutes field: invalid field "0-59/*", invalid element "0-59/*", invalid divisor "*".
+	at com.jfinal.core.Config.startPlugins(Config.java:137)
+	at com.jfinal.core.Config.configPluginWithOrder(Config.java:71)
+	at com.jfinal.core.Config.configJFinal(Config.java:56)
+	at com.jfinal.core.JFinal.init(JFinal.java:63)
+	at com.jfinal.core.JFinalFilter.init(JFinalFilter.java:49)
+	at org.eclipse.jetty.servlet.FilterHolder.doStart(FilterHolder.java:119)
+	at org.eclipse.jetty.util.component.AbstractLifeCycle.start(AbstractLifeCycle.java:64)
+	at org.eclipse.jetty.servlet.ServletHandler.initialize(ServletHandler.java:724)
+	at org.eclipse.jetty.servlet.ServletContextHandler.startContext(ServletContextHandler.java:265)
+	at org.eclipse.jetty.webapp.WebAppContext.startContext(WebAppContext.java:1250)
+	at org.eclipse.jetty.server.handler.ContextHandler.doStart(ContextHandler.java:706)
+	at org.eclipse.jetty.webapp.WebAppContext.doStart(WebAppContext.java:492)
+	at org.eclipse.jetty.util.component.AbstractLifeCycle.start(AbstractLifeCycle.java:64)
+	at org.eclipse.jetty.server.handler.HandlerWrapper.doStart(HandlerWrapper.java:95)
+	at org.eclipse.jetty.server.Server.doStart(Server.java:277)
+	at org.eclipse.jetty.util.component.AbstractLifeCycle.start(AbstractLifeCycle.java:64)
+	at com.jfinal.server.JettyServerForIDEA.doStart(JettyServerForIDEA.java:133)
+	at com.jfinal.server.JettyServerForIDEA.start(JettyServerForIDEA.java:72)
+	at com.jfinal.core.JFinal.start(JFinal.java:174)
+	at config.AppConfig.main(AppConfig.java:38)
+Caused by: it.sauronsoftware.cron4j.InvalidPatternException: invalid pattern "0-59/* * * * *". Error parsing minutes field: invalid field "0-59/*", invalid element "0-59/*", invalid divisor "*".
+	at it.sauronsoftware.cron4j.SchedulingPattern.<init>(Unknown Source)
+	at it.sauronsoftware.cron4j.Scheduler.schedule(Unknown Source)
+	at it.sauronsoftware.cron4j.Scheduler.schedule(Unknown Source)
+	at com.jfinal.plugin.cron4j.Cron4jPlugin$TaskInfo.schedule(Cron4jPlugin.java:257)
+	at com.jfinal.plugin.cron4j.Cron4jPlugin.start(Cron4jPlugin.java:216)
+	at com.jfinal.core.Config.startPlugins(Config.java:128)
+	... 19 more
+
+2018-07-27 12:03:25
+[ERROR]-[Thread: main]-[com.jfinal.core.Config.startPlugins()]: Plugin start error: com.jfinal.plugin.cron4j.Cron4jPlugin. 
+invalid pattern "0-*/1 * * * *". Error parsing minutes field: invalid field "0-*/1", invalid element "0-*/1", invalid range, invalid value "*", invalid integer value.
+it.sauronsoftware.cron4j.InvalidPatternException: invalid pattern "0-*/1 * * * *". Error parsing minutes field: invalid field "0-*/1", invalid element "0-*/1", invalid range, invalid value "*", invalid integer value.
+	at it.sauronsoftware.cron4j.SchedulingPattern.<init>(Unknown Source)
+	at it.sauronsoftware.cron4j.Scheduler.schedule(Unknown Source)
+	at it.sauronsoftware.cron4j.Scheduler.schedule(Unknown Source)
+	at com.jfinal.plugin.cron4j.Cron4jPlugin$TaskInfo.schedule(Cron4jPlugin.java:257)
+	at com.jfinal.plugin.cron4j.Cron4jPlugin.start(Cron4jPlugin.java:216)
+	at com.jfinal.core.Config.startPlugins(Config.java:128)
+	at com.jfinal.core.Config.configPluginWithOrder(Config.java:71)
+	at com.jfinal.core.Config.configJFinal(Config.java:56)
+	at com.jfinal.core.JFinal.init(JFinal.java:63)
+	at com.jfinal.core.JFinalFilter.init(JFinalFilter.java:49)
+	at org.eclipse.jetty.servlet.FilterHolder.doStart(FilterHolder.java:119)
+	at org.eclipse.jetty.util.component.AbstractLifeCycle.start(AbstractLifeCycle.java:64)
+	at org.eclipse.jetty.servlet.ServletHandler.initialize(ServletHandler.java:724)
+	at org.eclipse.jetty.servlet.ServletContextHandler.startContext(ServletContextHandler.java:265)
+	at org.eclipse.jetty.webapp.WebAppContext.startContext(WebAppContext.java:1250)
+	at org.eclipse.jetty.server.handler.ContextHandler.doStart(ContextHandler.java:706)
+	at org.eclipse.jetty.webapp.WebAppContext.doStart(WebAppContext.java:492)
+	at org.eclipse.jetty.util.component.AbstractLifeCycle.start(AbstractLifeCycle.java:64)
+	at org.eclipse.jetty.server.handler.HandlerWrapper.doStart(HandlerWrapper.java:95)
+	at org.eclipse.jetty.server.Server.doStart(Server.java:277)
+	at org.eclipse.jetty.util.component.AbstractLifeCycle.start(AbstractLifeCycle.java:64)
+	at com.jfinal.server.JettyServerForIDEA.doStart(JettyServerForIDEA.java:133)
+	at com.jfinal.server.JettyServerForIDEA.start(JettyServerForIDEA.java:72)
+	at com.jfinal.core.JFinal.start(JFinal.java:174)
+	at config.AppConfig.main(AppConfig.java:38)
+
+2018-07-27 12:03:25
+[WARN]-[Thread: main]-[org.eclipse.jetty.util.component.AbstractLifeCycle.setFailed()]: FAILED jfinal: java.lang.RuntimeException: Plugin start error: com.jfinal.plugin.cron4j.Cron4jPlugin. 
+invalid pattern "0-*/1 * * * *". Error parsing minutes field: invalid field "0-*/1", invalid element "0-*/1", invalid range, invalid value "*", invalid integer value.
+java.lang.RuntimeException: Plugin start error: com.jfinal.plugin.cron4j.Cron4jPlugin. 
+invalid pattern "0-*/1 * * * *". Error parsing minutes field: invalid field "0-*/1", invalid element "0-*/1", invalid range, invalid value "*", invalid integer value.
+	at com.jfinal.core.Config.startPlugins(Config.java:137)
+	at com.jfinal.core.Config.configPluginWithOrder(Config.java:71)
+	at com.jfinal.core.Config.configJFinal(Config.java:56)
+	at com.jfinal.core.JFinal.init(JFinal.java:63)
+	at com.jfinal.core.JFinalFilter.init(JFinalFilter.java:49)
+	at org.eclipse.jetty.servlet.FilterHolder.doStart(FilterHolder.java:119)
+	at org.eclipse.jetty.util.component.AbstractLifeCycle.start(AbstractLifeCycle.java:64)
+	at org.eclipse.jetty.servlet.ServletHandler.initialize(ServletHandler.java:724)
+	at org.eclipse.jetty.servlet.ServletContextHandler.startContext(ServletContextHandler.java:265)
+	at org.eclipse.jetty.webapp.WebAppContext.startContext(WebAppContext.java:1250)
+	at org.eclipse.jetty.server.handler.ContextHandler.doStart(ContextHandler.java:706)
+	at org.eclipse.jetty.webapp.WebAppContext.doStart(WebAppContext.java:492)
+	at org.eclipse.jetty.util.component.AbstractLifeCycle.start(AbstractLifeCycle.java:64)
+	at org.eclipse.jetty.server.handler.HandlerWrapper.doStart(HandlerWrapper.java:95)
+	at org.eclipse.jetty.server.Server.doStart(Server.java:277)
+	at org.eclipse.jetty.util.component.AbstractLifeCycle.start(AbstractLifeCycle.java:64)
+	at com.jfinal.server.JettyServerForIDEA.doStart(JettyServerForIDEA.java:133)
+	at com.jfinal.server.JettyServerForIDEA.start(JettyServerForIDEA.java:72)
+	at com.jfinal.core.JFinal.start(JFinal.java:174)
+	at config.AppConfig.main(AppConfig.java:38)
+Caused by: it.sauronsoftware.cron4j.InvalidPatternException: invalid pattern "0-*/1 * * * *". Error parsing minutes field: invalid field "0-*/1", invalid element "0-*/1", invalid range, invalid value "*", invalid integer value.
+	at it.sauronsoftware.cron4j.SchedulingPattern.<init>(Unknown Source)
+	at it.sauronsoftware.cron4j.Scheduler.schedule(Unknown Source)
+	at it.sauronsoftware.cron4j.Scheduler.schedule(Unknown Source)
+	at com.jfinal.plugin.cron4j.Cron4jPlugin$TaskInfo.schedule(Cron4jPlugin.java:257)
+	at com.jfinal.plugin.cron4j.Cron4jPlugin.start(Cron4jPlugin.java:216)
+	at com.jfinal.core.Config.startPlugins(Config.java:128)
+	... 19 more
+
+2018-07-27 12:03:25
+[WARN]-[Thread: main]-[org.eclipse.jetty.webapp.WebAppContext.doStart()]: Failed startup of context o.e.j.w.WebAppContext{/,file:/D:/Codeware/profile/mrboxTimer/src/main/webapp/}
+java.lang.RuntimeException: Plugin start error: com.jfinal.plugin.cron4j.Cron4jPlugin. 
+invalid pattern "0-*/1 * * * *". Error parsing minutes field: invalid field "0-*/1", invalid element "0-*/1", invalid range, invalid value "*", invalid integer value.
+	at com.jfinal.core.Config.startPlugins(Config.java:137)
+	at com.jfinal.core.Config.configPluginWithOrder(Config.java:71)
+	at com.jfinal.core.Config.configJFinal(Config.java:56)
+	at com.jfinal.core.JFinal.init(JFinal.java:63)
+	at com.jfinal.core.JFinalFilter.init(JFinalFilter.java:49)
+	at org.eclipse.jetty.servlet.FilterHolder.doStart(FilterHolder.java:119)
+	at org.eclipse.jetty.util.component.AbstractLifeCycle.start(AbstractLifeCycle.java:64)
+	at org.eclipse.jetty.servlet.ServletHandler.initialize(ServletHandler.java:724)
+	at org.eclipse.jetty.servlet.ServletContextHandler.startContext(ServletContextHandler.java:265)
+	at org.eclipse.jetty.webapp.WebAppContext.startContext(WebAppContext.java:1250)
+	at org.eclipse.jetty.server.handler.ContextHandler.doStart(ContextHandler.java:706)
+	at org.eclipse.jetty.webapp.WebAppContext.doStart(WebAppContext.java:492)
+	at org.eclipse.jetty.util.component.AbstractLifeCycle.start(AbstractLifeCycle.java:64)
+	at org.eclipse.jetty.server.handler.HandlerWrapper.doStart(HandlerWrapper.java:95)
+	at org.eclipse.jetty.server.Server.doStart(Server.java:277)
+	at org.eclipse.jetty.util.component.AbstractLifeCycle.start(AbstractLifeCycle.java:64)
+	at com.jfinal.server.JettyServerForIDEA.doStart(JettyServerForIDEA.java:133)
+	at com.jfinal.server.JettyServerForIDEA.start(JettyServerForIDEA.java:72)
+	at com.jfinal.core.JFinal.start(JFinal.java:174)
+	at config.AppConfig.main(AppConfig.java:38)
+Caused by: it.sauronsoftware.cron4j.InvalidPatternException: invalid pattern "0-*/1 * * * *". Error parsing minutes field: invalid field "0-*/1", invalid element "0-*/1", invalid range, invalid value "*", invalid integer value.
+	at it.sauronsoftware.cron4j.SchedulingPattern.<init>(Unknown Source)
+	at it.sauronsoftware.cron4j.Scheduler.schedule(Unknown Source)
+	at it.sauronsoftware.cron4j.Scheduler.schedule(Unknown Source)
+	at com.jfinal.plugin.cron4j.Cron4jPlugin$TaskInfo.schedule(Cron4jPlugin.java:257)
+	at com.jfinal.plugin.cron4j.Cron4jPlugin.start(Cron4jPlugin.java:216)
+	at com.jfinal.core.Config.startPlugins(Config.java:128)
+	... 19 more
+
+2018-07-27 12:03:25
+[WARN]-[Thread: main]-[org.eclipse.jetty.util.component.AbstractLifeCycle.setFailed()]: FAILED o.e.j.w.WebAppContext{/,file:/D:/Codeware/profile/mrboxTimer/src/main/webapp/}: java.lang.RuntimeException: Plugin start error: com.jfinal.plugin.cron4j.Cron4jPlugin. 
+invalid pattern "0-*/1 * * * *". Error parsing minutes field: invalid field "0-*/1", invalid element "0-*/1", invalid range, invalid value "*", invalid integer value.
+java.lang.RuntimeException: Plugin start error: com.jfinal.plugin.cron4j.Cron4jPlugin. 
+invalid pattern "0-*/1 * * * *". Error parsing minutes field: invalid field "0-*/1", invalid element "0-*/1", invalid range, invalid value "*", invalid integer value.
+	at com.jfinal.core.Config.startPlugins(Config.java:137)
+	at com.jfinal.core.Config.configPluginWithOrder(Config.java:71)
+	at com.jfinal.core.Config.configJFinal(Config.java:56)
+	at com.jfinal.core.JFinal.init(JFinal.java:63)
+	at com.jfinal.core.JFinalFilter.init(JFinalFilter.java:49)
+	at org.eclipse.jetty.servlet.FilterHolder.doStart(FilterHolder.java:119)
+	at org.eclipse.jetty.util.component.AbstractLifeCycle.start(AbstractLifeCycle.java:64)
+	at org.eclipse.jetty.servlet.ServletHandler.initialize(ServletHandler.java:724)
+	at org.eclipse.jetty.servlet.ServletContextHandler.startContext(ServletContextHandler.java:265)
+	at org.eclipse.jetty.webapp.WebAppContext.startContext(WebAppContext.java:1250)
+	at org.eclipse.jetty.server.handler.ContextHandler.doStart(ContextHandler.java:706)
+	at org.eclipse.jetty.webapp.WebAppContext.doStart(WebAppContext.java:492)
+	at org.eclipse.jetty.util.component.AbstractLifeCycle.start(AbstractLifeCycle.java:64)
+	at org.eclipse.jetty.server.handler.HandlerWrapper.doStart(HandlerWrapper.java:95)
+	at org.eclipse.jetty.server.Server.doStart(Server.java:277)
+	at org.eclipse.jetty.util.component.AbstractLifeCycle.start(AbstractLifeCycle.java:64)
+	at com.jfinal.server.JettyServerForIDEA.doStart(JettyServerForIDEA.java:133)
+	at com.jfinal.server.JettyServerForIDEA.start(JettyServerForIDEA.java:72)
+	at com.jfinal.core.JFinal.start(JFinal.java:174)
+	at config.AppConfig.main(AppConfig.java:38)
+Caused by: it.sauronsoftware.cron4j.InvalidPatternException: invalid pattern "0-*/1 * * * *". Error parsing minutes field: invalid field "0-*/1", invalid element "0-*/1", invalid range, invalid value "*", invalid integer value.
+	at it.sauronsoftware.cron4j.SchedulingPattern.<init>(Unknown Source)
+	at it.sauronsoftware.cron4j.Scheduler.schedule(Unknown Source)
+	at it.sauronsoftware.cron4j.Scheduler.schedule(Unknown Source)
+	at com.jfinal.plugin.cron4j.Cron4jPlugin$TaskInfo.schedule(Cron4jPlugin.java:257)
+	at com.jfinal.plugin.cron4j.Cron4jPlugin.start(Cron4jPlugin.java:216)
+	at com.jfinal.core.Config.startPlugins(Config.java:128)
+	... 19 more
+
+2018-07-27 12:03:25
+[WARN]-[Thread: main]-[org.eclipse.jetty.util.component.AbstractLifeCycle.setFailed()]: FAILED org.eclipse.jetty.server.Server@5f058f00: java.lang.RuntimeException: Plugin start error: com.jfinal.plugin.cron4j.Cron4jPlugin. 
+invalid pattern "0-*/1 * * * *". Error parsing minutes field: invalid field "0-*/1", invalid element "0-*/1", invalid range, invalid value "*", invalid integer value.
+java.lang.RuntimeException: Plugin start error: com.jfinal.plugin.cron4j.Cron4jPlugin. 
+invalid pattern "0-*/1 * * * *". Error parsing minutes field: invalid field "0-*/1", invalid element "0-*/1", invalid range, invalid value "*", invalid integer value.
+	at com.jfinal.core.Config.startPlugins(Config.java:137)
+	at com.jfinal.core.Config.configPluginWithOrder(Config.java:71)
+	at com.jfinal.core.Config.configJFinal(Config.java:56)
+	at com.jfinal.core.JFinal.init(JFinal.java:63)
+	at com.jfinal.core.JFinalFilter.init(JFinalFilter.java:49)
+	at org.eclipse.jetty.servlet.FilterHolder.doStart(FilterHolder.java:119)
+	at org.eclipse.jetty.util.component.AbstractLifeCycle.start(AbstractLifeCycle.java:64)
+	at org.eclipse.jetty.servlet.ServletHandler.initialize(ServletHandler.java:724)
+	at org.eclipse.jetty.servlet.ServletContextHandler.startContext(ServletContextHandler.java:265)
+	at org.eclipse.jetty.webapp.WebAppContext.startContext(WebAppContext.java:1250)
+	at org.eclipse.jetty.server.handler.ContextHandler.doStart(ContextHandler.java:706)
+	at org.eclipse.jetty.webapp.WebAppContext.doStart(WebAppContext.java:492)
+	at org.eclipse.jetty.util.component.AbstractLifeCycle.start(AbstractLifeCycle.java:64)
+	at org.eclipse.jetty.server.handler.HandlerWrapper.doStart(HandlerWrapper.java:95)
+	at org.eclipse.jetty.server.Server.doStart(Server.java:277)
+	at org.eclipse.jetty.util.component.AbstractLifeCycle.start(AbstractLifeCycle.java:64)
+	at com.jfinal.server.JettyServerForIDEA.doStart(JettyServerForIDEA.java:133)
+	at com.jfinal.server.JettyServerForIDEA.start(JettyServerForIDEA.java:72)
+	at com.jfinal.core.JFinal.start(JFinal.java:174)
+	at config.AppConfig.main(AppConfig.java:38)
+Caused by: it.sauronsoftware.cron4j.InvalidPatternException: invalid pattern "0-*/1 * * * *". Error parsing minutes field: invalid field "0-*/1", invalid element "0-*/1", invalid range, invalid value "*", invalid integer value.
+	at it.sauronsoftware.cron4j.SchedulingPattern.<init>(Unknown Source)
+	at it.sauronsoftware.cron4j.Scheduler.schedule(Unknown Source)
+	at it.sauronsoftware.cron4j.Scheduler.schedule(Unknown Source)
+	at com.jfinal.plugin.cron4j.Cron4jPlugin$TaskInfo.schedule(Cron4jPlugin.java:257)
+	at com.jfinal.plugin.cron4j.Cron4jPlugin.start(Cron4jPlugin.java:216)
+	at com.jfinal.core.Config.startPlugins(Config.java:128)
+	... 19 more
+
+2018-07-27 12:03:25
+[ERROR]-[Thread: main]-[com.jfinal.kit.LogKit.error()]: Plugin start error: com.jfinal.plugin.cron4j.Cron4jPlugin. 
+invalid pattern "0-*/1 * * * *". Error parsing minutes field: invalid field "0-*/1", invalid element "0-*/1", invalid range, invalid value "*", invalid integer value.
+java.lang.RuntimeException: Plugin start error: com.jfinal.plugin.cron4j.Cron4jPlugin. 
+invalid pattern "0-*/1 * * * *". Error parsing minutes field: invalid field "0-*/1", invalid element "0-*/1", invalid range, invalid value "*", invalid integer value.
+	at com.jfinal.core.Config.startPlugins(Config.java:137)
+	at com.jfinal.core.Config.configPluginWithOrder(Config.java:71)
+	at com.jfinal.core.Config.configJFinal(Config.java:56)
+	at com.jfinal.core.JFinal.init(JFinal.java:63)
+	at com.jfinal.core.JFinalFilter.init(JFinalFilter.java:49)
+	at org.eclipse.jetty.servlet.FilterHolder.doStart(FilterHolder.java:119)
+	at org.eclipse.jetty.util.component.AbstractLifeCycle.start(AbstractLifeCycle.java:64)
+	at org.eclipse.jetty.servlet.ServletHandler.initialize(ServletHandler.java:724)
+	at org.eclipse.jetty.servlet.ServletContextHandler.startContext(ServletContextHandler.java:265)
+	at org.eclipse.jetty.webapp.WebAppContext.startContext(WebAppContext.java:1250)
+	at org.eclipse.jetty.server.handler.ContextHandler.doStart(ContextHandler.java:706)
+	at org.eclipse.jetty.webapp.WebAppContext.doStart(WebAppContext.java:492)
+	at org.eclipse.jetty.util.component.AbstractLifeCycle.start(AbstractLifeCycle.java:64)
+	at org.eclipse.jetty.server.handler.HandlerWrapper.doStart(HandlerWrapper.java:95)
+	at org.eclipse.jetty.server.Server.doStart(Server.java:277)
+	at org.eclipse.jetty.util.component.AbstractLifeCycle.start(AbstractLifeCycle.java:64)
+	at com.jfinal.server.JettyServerForIDEA.doStart(JettyServerForIDEA.java:133)
+	at com.jfinal.server.JettyServerForIDEA.start(JettyServerForIDEA.java:72)
+	at com.jfinal.core.JFinal.start(JFinal.java:174)
+	at config.AppConfig.main(AppConfig.java:38)
+Caused by: it.sauronsoftware.cron4j.InvalidPatternException: invalid pattern "0-*/1 * * * *". Error parsing minutes field: invalid field "0-*/1", invalid element "0-*/1", invalid range, invalid value "*", invalid integer value.
+	at it.sauronsoftware.cron4j.SchedulingPattern.<init>(Unknown Source)
+	at it.sauronsoftware.cron4j.Scheduler.schedule(Unknown Source)
+	at it.sauronsoftware.cron4j.Scheduler.schedule(Unknown Source)
+	at com.jfinal.plugin.cron4j.Cron4jPlugin$TaskInfo.schedule(Cron4jPlugin.java:257)
+	at com.jfinal.plugin.cron4j.Cron4jPlugin.start(Cron4jPlugin.java:216)
+	at com.jfinal.core.Config.startPlugins(Config.java:128)
+	... 19 more
